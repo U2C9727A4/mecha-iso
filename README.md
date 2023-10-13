@@ -19,7 +19,7 @@ builds ISOs:
 After you've built it, you can test it in QEMU by running
 `make test`.
 
-The default password for liveuser is `virbos`.
+The default password for mecha-anon is `mecha-anon`.
 Access the root account by using sudo.
 
 For more information on archiso and how to use it, refer to
