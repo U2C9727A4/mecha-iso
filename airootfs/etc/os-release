@@ -1,7 +1,7 @@
-NAME="Virbos"
-PRETTY_NAME="Virbos"
-ID=virbos
+NAME="Mecha-iso"
+PRETTY_NAME="Mecha-iso"
+ID=mecha-iso
 BUILD_ID=rolling
 ANSI_COLOR="32"
-HOME_URL="https://virbos.xyz"
+HOME_URL="https://github.com/U2C9727A4/mecha-iso"
 LOGO=virbos-logo
