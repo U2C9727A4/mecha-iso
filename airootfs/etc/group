@@ -1,5 +1,5 @@
 root:x:0:root
-adm:x:4:liveuser
-wheel:x:10:liveuser
-uucp:x:14:liveuser
-liveuser:x:1000:
+adm:x:4:mecha-anon
+wheel:x:10:mecha-anon
+uucp:x:14:mecha-anon
+mecha-anon:x:1000:
