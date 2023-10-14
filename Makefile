@@ -5,7 +5,7 @@ CONFREPO = https://github.com/Virbos/virbos-configs
 CONFDIR  = airootfs/home/liveuser/.config
 CONFIGS  = alacritty,bspwm,conky,i3,kitty,polybar,sxhkd
 
-ISO   = virbos-$(shell date '+%Y.%m.%d')-x86_64.iso
+ISO   = mecha-iso-$(shell date '+%Y.%m.%d')-x86_64.iso
 CKSUM = ${ISO}.sha256
 
 ifneq (${VERBOSE},)
