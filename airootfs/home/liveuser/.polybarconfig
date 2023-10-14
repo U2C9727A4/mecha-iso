@@ -1,0 +1,212 @@
+; Virbos default Polybar config
+
+[colors]
+background = #202020
+foreground = #bbbbbb
+primary    = #057800
+alert      = #d11d1d
+
+[bar/top]
+line-size = 3
+line-color = #f00
+
+border-size  = 3
+border-color = #00000000
+
+font-0 = "Iosevka Nerd Font:style=Regular:size=13"
+
+width = 100%
+height = 25
+offset-y = 0
+offset-x = 0
+
+border-top-size = 0
+border-bottom-size = 0
+border-right-size = 0
+border-left-size = 0
+
+bottom = false
+
+; miscellaneous ;
+
+radius = 0
+fixed-center = false
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 2
+
+modules-left   = workspaces
+modules-center = window
+modules-right  = cpu memory date
+
+tray-position = hidden
+tray-padding = 2 
+;tray-transparent = true
+;tray-background = #0063ff
+
+;wm-restack = bspwm
+;wm-restack = i3
+
+;override-redirect = true
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+; modules ;
+
+[module/workspaces]
+type = internal/xworkspaces
+; Only show workspaces defined on the same output as the bar
+pin-workspaces = true
+enable-click =  true
+enable-scroll = true
+; icon-[0-9]+ = <desktop-name>;<icon>
+; Map desktop names to some icon. The icon is then available in the %icon% token
+; NOTE: The desktop name needs to match the name configured by the WM
+; You can get a list of the defined desktop names using:
+; $ xprop -root _NET_DESKTOP_NAMES
+; NOTE: Neither <desktop-name> nor <icon> can contain a semicolon (;)
+;icon-0 = 0;
+;icon-1 = 1;
+;icon-2 = 2;
+;icon-3 = 3;
+;icon-4 = 4;
+;icon-5 = 5;
+;icon-6 = 6;
+;icon-7 = 7;
+;icon-8 = 8;
+;icon-9 = 9;
+
+; Available tags:
+;   <label-monitor>
+;   <label-state> - gets replaced with <label-(active|urgent|occupied|empty)>
+; Default: <label-state>
+format = <label-state>
+
+; Available tokens:
+;   %name%
+; Default: %name%
+label-monitor = %name%
+
+; Used for the currently selected workspaces
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+;   %nwin% (New in version 3.6.0)
+; Default: %icon% %name%
+label-active = %icon% %name%
+label-active-foreground = ${colors.primary}
+;label-active-background = ${colors.background}
+label-active-underline  = ${colors.primary}
+label-active-padding = 2
+
+; Used for workspaces at least one window
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+;   %nwin% (New in version 3.6.0)
+; Default: %icon% %name%
+label-occupied = %icon%
+label-occupied-underline = #555555
+
+label-urgent = %icon%
+label-urgent-foreground = ${colors.foreground}
+label-urgent-background = ${colors.alert}
+label-urgent-underline  = ${colors.alert}
+label-urgent-padding = 4
+
+label-empty = %icon%
+label-empty-foreground = #55
+label-empty-padding = 2
+
+[module/window]
+type = internal/xwindow
+format-foreground = ${colors.primary}
+label = %title%
+label-maxlen = 100
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = "cpu "
+format-prefix-foreground = ${colors.foreground}
+format-underline = 
+label = %percentage:2%%
+label-foreground = ${colors.foreground}
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = "memory "
+format-prefix-foreground = ${colors.foreground}
+format-underline = 
+label = %percentage_used%%
+label-foreground = ${colors.foreground}
+
+[module/date]
+type = internal/date
+interval = 5
+
+date =     "%Y/%m/%d"
+date-alt = "%Y/%m/%d"
+
+time =     " %H:%M"
+time-alt = " %H:%M:%S"
+
+format-prefix = datetime
+format-prefix-foreground = ${colors.foreground}
+format-underline = 
+format-foreground = ${colors.foreground}
+
+label = %time% %date%
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume = snd <label-volume> <bar-volume>
+format-volume-foreground = ${colors.foreground}
+label-volume = %percentage%%
+label-volume-foreground = ${colors.foreground}
+
+label-muted = muted
+label-muted-foreground = ${colors.secondary}
+
+bar-volume-width = 10
+bar-volume-foreground-0 = ${colors.foreground}
+bar-volume-foreground-1 = ${colors.foreground}
+bar-volume-foreground-2 = ${colors.foreground}
+bar-volume-foreground-3 = ${colors.foreground}
+bar-volume-foreground-4 = ${colors.foreground}
+bar-volume-foreground-5 = ${colors.foreground}
+bar-volume-foreground-6 = ${colors.alert}
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 4
+bar-volume-fill = ─
+bar-volume-fill-font = 4
+bar-volume-empty = ─
+bar-volume-empty-font = 4
+bar-volume-empty-foreground = ${colors.foreground-alt}
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+; vi:ft=dosini
+
+
+; vi:ft=dosini
