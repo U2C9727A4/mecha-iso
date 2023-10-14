@@ -127,6 +127,9 @@ virbos-livescripts
 virbos-logos
 maxfetch
 alacritty-sixel
+ktechlab
+# Hold lite-xl package until it is added to repo
+# lite-xl
 
 # X
 i3-wm
@@ -143,4 +146,3 @@ mesa
 # etc.
 ttf-iosevka-nerd
 micro
-neovim
