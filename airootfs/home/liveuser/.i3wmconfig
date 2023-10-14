@@ -4,7 +4,7 @@
 
 set $mod Mod4
 
-font pango:Iosevka Nerd Font 16
+font pango:Iosevka Nerd Font 10
 
 exec --no-startup-id polybar
 exec --no-startup-id dex --autostart --environment i3
