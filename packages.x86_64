@@ -142,6 +142,7 @@ xf86-video-intel
 xf86-video-nouveau
 mesa
 freecad
+rofi
 
 # etc.
 ttf-iosevka-nerd
