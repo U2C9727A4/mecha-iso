@@ -1,11 +1,11 @@
 MKARCHISO      = mkarchiso
-MKARCHISOFLAGS = -Avirbos -Cpacman.conf -LVIRBOS_ISO -wiso .
+MKARCHISOFLAGS = -Amechaiso -Cpacman.conf -LMECHA_ISO -wiso .
 
 CONFREPO = https://github.com/Virbos/virbos-configs
 CONFDIR  = airootfs/home/liveuser/.config
 CONFIGS  = alacritty,bspwm,conky,i3,kitty,polybar,sxhkd
 
-ISO   = virbos-$(shell date '+%Y.%m.%d')-x86_64.iso
+ISO   = mechaISO-$(shell date '+%Y.%m.%d')-x86_64.iso
 CKSUM = ${ISO}.sha256
 
 ifneq (${VERBOSE},)
@@ -23,7 +23,7 @@ ${ISO}:
 	cp -f pacman.conf airootfs/etc/pacman.conf
 	@# Build ISO
 	${MKARCHISO} ${MKARCHISOFLAGS}
-	mv out/${ISO} ./mechaISO-$(shell date '+%Y.%m.%d').iso
+	mv out/${ISO} .
 
 checksum: ${CKSUM}
 ${CKSUM}: ${ISO}
