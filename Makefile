@@ -23,7 +23,7 @@ ${ISO}:
 	cp -f pacman.conf airootfs/etc/pacman.conf
 	@# Build ISO
 	${MKARCHISO} ${MKARCHISOFLAGS}
-	mv out/${ISO} .
+	mv out/virbos-*.*.*-*.iso ./mechaISO-$(shell date '+%Y.%m.%d')-x86_64.iso
 
 checksum: ${CKSUM}
 ${CKSUM}: ${ISO}
