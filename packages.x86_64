@@ -126,7 +126,6 @@ zsh
 virbos-livescripts
 virbos-logos
 maxfetch
-alacritty-sixel
 ktechlab
 lite-xl
 
@@ -143,6 +142,7 @@ xf86-video-nouveau
 mesa
 freecad
 rofi
+alacritty
 
 # etc.
 ttf-iosevka-nerd
