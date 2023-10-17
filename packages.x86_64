@@ -121,10 +121,9 @@ wvdial
 xfsprogs
 xl2tpd
 zsh
+btop
 
 # virbos repo
-virbos-livescripts
-virbos-logos
 maxfetch
 ktechlab
 lite-xl
@@ -132,7 +131,6 @@ lite-xl
 # X
 i3-wm
 polybar
-conky
 firefox
 xorg-server
 xorg-xinit
