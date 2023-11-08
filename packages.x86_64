@@ -125,7 +125,6 @@ btop
 
 # virbos repo
 maxfetch
-ktechlab
 lite-xl
 
 # X
@@ -145,3 +144,4 @@ alacritty
 # etc.
 ttf-iosevka-nerd
 micro
+fritzing
